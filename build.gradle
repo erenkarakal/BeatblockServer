@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group = 'me.eren.bbserver'
+version = '1.0.0'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+dependencies {
+    implementation('io.netty:netty-all:4.1.24.Final')
+    implementation("org.machinemc:paklet-api:1.2.2")
+    implementation("org.machinemc:paklet-core:1.2.2")
+    annotationProcessor("org.machinemc:paklet-processor:1.2.2")
+
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "machinemcRepositoryReleases"
+        url = uri("https://repo.machinemc.org/releases")
+    }
+}
